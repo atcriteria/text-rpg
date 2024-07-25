@@ -1,0 +1,11 @@
+{
+  "name": "text-rpg",
+  "version": "1.0.0",
+  "description": "A text based RPG sim for fun and to play throughout the day, mostly for myself to enjoy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Archanine",
+  "license": "ISC"
+}
