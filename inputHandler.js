@@ -30,7 +30,7 @@ const clearInput = () => {
  * @param {string} command 
  */
 const submitCommand = (command) => {
-    console.log(`Command Submitted: ${command}`)
+    // console.log(`Command Submitted: ${command}`)
     if (command.length === 1){
         // Process quick command
         return;
@@ -45,6 +45,21 @@ const submitCommand = (command) => {
     // Process more complex command
     const verb = params.shift();
     const text = params.join(" ");
-    console.log(`~Command Executed~\nVerb: ${verb}\nText: ${text}`)
+    writeOutput(`Command Executed: ${command}`)
     return;
+}
+
+/**
+ * Takes in a string of output and renders it to the game-output
+ * @param {string} output 
+ */
+const writeOutput = (output) => {
+    const lines = output.split("\n");
+    lines.forEach(line => {
+        const newLine = document.createElement("div")
+        newLine.innerText = line;
+        // Text is reversed, so this is actually the end,
+        // because text is bottum -> up here.
+        gameOutput.prepend(newLine);
+    });
 }
