@@ -25,6 +25,7 @@ body {
 }
 
 #game-output {
+    font-family: 'Courier New', Courier, monospace;
     width: 59%;
     height: 85.5%;
     background-color: red;
@@ -32,7 +33,12 @@ body {
     display: flex;
     flex-direction: column-reverse;
     overflow-y: auto;
+    text-align: justify;
     padding: .5% .5%;
+}
+
+#game-output br {
+    margin: 7px auto;
 }
 
 #game-input {

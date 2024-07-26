@@ -8,4 +8,4 @@ gameInput.value = "";
 
 // Finished, clear text
 
-gameOutput.innerText = blurbs.welcome;
+writeOutput(blurbs.welcome);
