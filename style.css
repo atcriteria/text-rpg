@@ -25,19 +25,19 @@ body {
 }
 
 #game-output {
-    width: 60%;
-    height: 87.5%;
+    width: 59%;
+    height: 85.5%;
     background-color: red;
-    text-indent: 5px;
     text-wrap: wrap;
     overflow-y: scroll;
+    padding: .5% .5%;
 }
 
 #game-input {
     margin: 1.25% auto;
     padding: 0;
     width: 60%;
-    height: 10%;
+    height: 9.5%;
     border: none;
     background-color: rgb(25, 25, 25);
     color: white;
