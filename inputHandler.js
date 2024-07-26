@@ -45,6 +45,6 @@ const submitCommand = (command) => {
     // Process more complex command
     const verb = params.shift();
     const text = params.join(" ");
-    writeOutput(`Command Executed: ${command}`)
+    processOutput(`Command Executed: ${command}`, DIALOGUE)
     return;
 }

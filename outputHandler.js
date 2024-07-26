@@ -14,6 +14,10 @@ const processOutput = (output, outputType) => {
     }
 }
 
+/**
+ * 
+ * @param {string} d 
+ */
 const writeDialogue = d => {
     const lines = d.split("\n");
     lines.forEach(line => {
