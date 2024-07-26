@@ -48,20 +48,3 @@ const submitCommand = (command) => {
     writeOutput(`Command Executed: ${command}`)
     return;
 }
-
-/**
- * Takes in a string of output and renders it to the game-output
- * @param {string} output 
- */
-const writeOutput = (output) => {
-    const lines = output.split("\n");
-    lines.forEach(line => {
-        const newLine = document.createElement((line.length == 0) ? "br" : "div")
-        newLine.innerText = line;
-        console.log(newLine)
-        
-        // Text is reversed, so this is actually the end,
-        // because text is bottum -> up here.
-        gameOutput.prepend(newLine);
-    });
-}
