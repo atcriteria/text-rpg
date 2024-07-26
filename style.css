@@ -58,8 +58,13 @@ body {
 }
 
 #game-commands {
-    top: 0;
-    width: 28%;
-    height: 96%;
+    text-align: center;
+    padding: .5%;
+    width: 27.5%;
+    height: 94.8%;
     background-color: rgb(12, 80, 80);
+}
+
+.menu-item {
+    margin: 7px auto;
 }
