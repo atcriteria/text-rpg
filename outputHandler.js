@@ -23,7 +23,6 @@ const writeDialogue = d => {
     lines.forEach(line => {
         const newLine = document.createElement((line.length == 0) ? "br" : "div")
         newLine.innerText = line;
-        console.log(newLine)
         
         // Text is reversed, so this is actually the end,
         // because text is bottum -> up here.

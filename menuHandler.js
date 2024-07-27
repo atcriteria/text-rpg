@@ -3,7 +3,7 @@
  * @returns {Object}
  */
 const getMenu = () => {
-    switch (game.state) {
+    switch (Game.state) {
         case STATE_GAME_START:
             return MENU_START;
         default:

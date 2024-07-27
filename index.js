@@ -7,16 +7,6 @@ const gameMenu = document.getElementById("game-commands")
 gameInput.addEventListener("keydown", inputListener)
 gameInput.value = "";
 
-// Finished, clear text
-const game = {
-    state: "",
-    currentMenu: {}
-}
-
-game.state = STATE_GAME_START;
-game.currentMenu = getMenu(game.state);
-
-renderMenu(game.currentMenu);
-processOutput(blurbs.welcome, DIALOGUE);
+Game.Initialize();
 
 console.log("Game Ready")

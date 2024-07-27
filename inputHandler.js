@@ -36,9 +36,8 @@ const inputListener = e => {
  * @returns {boolean}
  */
 const attemptQuickCommand = k => {
-    if (k in game.currentMenu){
-        console.log("Found quick command...")
-        const menuItem = game.currentMenu[k]
+    if (k in Game.menu){
+        const menuItem = Game.menu[k]
         return menuItem.execute();
     }
     return false;
@@ -66,7 +65,6 @@ const clearInput = () => {
  * @param {string} command 
  */
 const submitCommand = (command) => {
-    // console.log(`Command Submitted: ${command}`)
     const params = command.split(" ");
     
     if (params.length === 1){
