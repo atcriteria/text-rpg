@@ -10,6 +10,7 @@ const inputListener = e => {
     if (executed){
         // Prevents the keystroke from being sent to input container.
         e.preventDefault();
+        flashMenu(e.key)
         return;
     }
 
@@ -41,6 +42,19 @@ const attemptQuickCommand = k => {
         return menuItem.execute();
     }
     return false;
+}
+
+/**
+ * Adds a class to the menu item executed that causes a visual
+ * effect for a brief time before removing the class.
+ * @param {string} menuKey // the key that we are executing, 0/1/2/3/4, etc
+ */
+const flashMenu = menuKey => {
+    const item = document.getElementById(`menu-item-${menuKey}`)
+    item.classList.add("menu-flash")
+    setTimeout(() => {
+        item.classList.remove("menu-flash")
+    }, 100)
 }
 
 const clearInput = () => {

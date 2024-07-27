@@ -26,6 +26,6 @@ class MenuItem {
  */
 const MENU_START = {
     "0": new MenuItem("Start", processOutput, [blurbs.start, DIALOGUE], "Start Game"),
-    "1": new MenuItem("Help", processOutput, [blurbs.start, DIALOGUE], "Game Help"),
-    "2": new MenuItem("About", processOutput, [blurbs.start, DIALOGUE], "About"),
+    "1": new MenuItem("Help", processOutput, [blurbs.help, DIALOGUE], "Game Help"),
+    "2": new MenuItem("About", processOutput, [blurbs.about, DIALOGUE], "About"),
 }

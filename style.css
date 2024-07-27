@@ -68,3 +68,12 @@ body {
 .menu-item {
     margin: 7px auto;
 }
+
+.menu-flash {
+    animation: flash 0.1s ease-out;
+}
+
+@keyframes flash {
+    0% { background-color: green;}
+    100% {background-color: transparent;}
+}
