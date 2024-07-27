@@ -5,15 +5,19 @@ const gameMenu = document.getElementById("game-commands")
 
 
 gameInput.addEventListener("keydown", inputListener)
+/**
+ * @param {string} gameInput.value;
+ */
 gameInput.value = "";
 
 // Finished, clear text
 const game = {
-    state: ""
+    state: "",
+    currentMenu: null
 }
 
 game.state = STATE_GAME_START;
+game.currentMenu = getMenu(game.state);
 
-
-renderMenu(getMenu());
+renderMenu(game.currentMenu);
 processOutput(blurbs.welcome, DIALOGUE);

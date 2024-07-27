@@ -5,6 +5,9 @@
  * @param {*} e 
  */
 const inputListener = e => {
+    if (gameInput.value.length == 1){
+        const executed = attemptQuickCommand(gameInput.value);
+    }
     switch (e.key) {
         //Submit Command
         case "Enter":
@@ -21,6 +24,15 @@ const inputListener = e => {
     }
 };
 
+/**
+ * 
+ * @param {string} k 
+ * @returns {boolean}
+ */
+const attemptQuickCommand = k => {
+
+}
+
 const clearInput = () => {
     gameInput.value = "";
 }
@@ -31,10 +43,6 @@ const clearInput = () => {
  */
 const submitCommand = (command) => {
     // console.log(`Command Submitted: ${command}`)
-    if (command.length === 1){
-        // Process quick command
-        return;
-    }
     const params = command.split(" ");
     
     if (params.length === 1){
