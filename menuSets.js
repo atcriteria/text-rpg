@@ -1,20 +1,26 @@
+class MenuItem {
+    /**
+     * @param {string} text 
+     * @param {function} command 
+     * @param {Array} params 
+     * @param {string} description 
+     */
+    constructor(text, command, params, description){
+        this.text = text;
+        this.command = command;
+        this.params = params;
+        this.description = description;
+    }
+    execute(){
+        this.command(...this.params)
+    }
+}
+
+/**
+ * @param {object} MENU_START
+ */
 const MENU_START = {
-    "0": {
-        text: "Start",
-        command: processOutput,
-        params: [blurbs.start, DIALOGUE],
-        description: "Start Game"
-    },
-    "1": {
-        text: "Help",
-        command: processOutput,
-        params: [blurbs.start, DIALOGUE],
-        description: "Game Help"
-    },
-    "2": {
-        text: "About",
-        command: processOutput,
-        params: [blurbs.start, DIALOGUE],
-        description: "About the Game"
-    },
+    "0": new MenuItem("Start", processOutput, [blurbs.start, DIALOGUE], "Start Game"),
+    "1": new MenuItem("Help", processOutput, [blurbs.start, DIALOGUE], "Game Help"),
+    "2": new MenuItem("About", processOutput, [blurbs.start, DIALOGUE], "About"),
 }
