@@ -2,12 +2,17 @@
  * The game-input event listener. This is what parses
  * player input and commands into actions.
  * 
- * @param {*} e 
+ * @param {Event} e 
  */
 const inputListener = e => {
-    if (gameInput.value.length == 1){
-        const executed = attemptQuickCommand(gameInput.value);
+    let executed = false;
+    if (e.target.value.length <= 1) executed = attemptQuickCommand(e.key);
+    if (executed){
+        // Prevents the keystroke from being sent to input container.
+        e.preventDefault();
+        return;
     }
+
     switch (e.key) {
         //Submit Command
         case "Enter":
@@ -30,7 +35,12 @@ const inputListener = e => {
  * @returns {boolean}
  */
 const attemptQuickCommand = k => {
-
+    if (k in game.currentMenu){
+        console.log("Found quick command...")
+        const menuItem = game.currentMenu[k]
+        return menuItem.execute();
+    }
+    return false;
 }
 
 const clearInput = () => {

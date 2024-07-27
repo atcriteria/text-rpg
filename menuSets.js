@@ -12,7 +12,12 @@ class MenuItem {
         this.description = description;
     }
     execute(){
-        this.command(...this.params)
+        try {
+            this.command(...this.params);
+            return true;
+        } catch (err) {
+            return false;
+        }
     }
 }
 

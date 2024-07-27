@@ -1,4 +1,7 @@
-// Render menu commands.
+/**
+ * Returns the current game state menu
+ * @returns {Object}
+ */
 const getMenu = () => {
     switch (game.state) {
         case STATE_GAME_START:
