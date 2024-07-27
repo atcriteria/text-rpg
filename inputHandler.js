@@ -36,8 +36,8 @@ const inputListener = e => {
  * @returns {boolean}
  */
 const attemptQuickCommand = k => {
-    if (k in Game.menu){
-        const menuItem = Game.menu[k]
+    if (k in Menu.menu){
+        const menuItem = Menu.menu[k]
         return menuItem.execute();
     }
     return false;

@@ -3,11 +3,7 @@
 class GameInstance {
     constructor() {
         this.state = null;
-        this.menu = null;
     }
-    /** @param {object} menu */
-    SetMenu(menu){ this.menu = menu; }
-
     /** @param {string} state */
     SetState(state) { this.state = state; }
 
@@ -15,8 +11,6 @@ class GameInstance {
     // In the future, this will load player state.
     Initialize() {
         this.SetState(STATE_GAME_START);
-        this.SetMenu(getMenu(this.state));
-        renderMenu(this.menu);
         processOutput(blurbs.welcome, DIALOGUE);
     }
 }

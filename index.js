@@ -8,4 +8,6 @@ gameInput.addEventListener("keydown", inputListener)
 gameInput.value = "";
 
 Game.Initialize();
+Menu.Initialize();
+
 console.log("Game Ready")

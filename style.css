@@ -67,6 +67,8 @@ body {
 
 .menu-item {
     margin: 7px auto;
+    width: 90%;
+    text-align: left;
 }
 
 .menu-flash {
