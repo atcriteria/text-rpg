@@ -1,3 +1,15 @@
+/* Apply border-box globally */
+/*
+    Per ChatGPT, the default functionality of CSS is content-box, which 
+    is what increases the sizes of containers based on margin/padding.
+    To correct this, we use border-box, which makes it so the set width
+    and height include the padding, so it actually pushes the content in
+    without increases the size of the container. Incredibly 10/10
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     margin: auto;
 }
@@ -30,15 +42,15 @@ h3, p {
 
 #game-output {
     font-family: 'Courier New', Courier, monospace;
-    width: 68%;
-    height: 80%;
+    width: 910px;
+    height: 480px;
     background-color: red;
     text-wrap: wrap;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: auto;
     text-align: justify;
-    padding: .5% 1% .5% .5%;
+    padding: 5px 10px 5px 5px;
 }
 
 #game-output br {
@@ -46,10 +58,10 @@ h3, p {
 }
 
 #game-input {
-    margin-top: 1.8%;
+    margin-top: 10px;
     padding: 0;
-    width: 69%;
-    height: 10%;
+    width: 910px;
+    height: 70px;
     border: none;
     background-color: rgb(25, 25, 25);
     color: white;
@@ -59,8 +71,8 @@ h3, p {
 #game-commands {
     text-align: center;
     padding: .5%;
-    width: 27.5%;
-    height: 94.8%;
+    width: 260px;
+    height: 560px;
     background-color: rgb(12, 80, 80);
 }
 
