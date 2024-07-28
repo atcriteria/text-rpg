@@ -40,7 +40,7 @@ const createMenus = () => {
     });
 
     MENU_CHAR_SELECT = new MenuList({
-        "1": new MenuItem("Create New", Menu.SetState, [STATE_MENU_CHAR_CREATE_RACE], "Create a new character"),
+        "1": new MenuItem("Create New", Menu.SetState, [STATE_MENU_CHAR_CREATE_RACE, describeRaces], "Create a new character"),
     });
 
     MENU_CHAR_CREATE_RACE = new MenuList({

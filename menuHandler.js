@@ -20,6 +20,7 @@ class MenuInstance {
         this.menu = state.menu;
         try {
             this.RenderMenu();
+            console.log(output)
             if (output) writeDialogue(output);
         } catch (error) {
             console.error(error);
