@@ -15,11 +15,12 @@ class MenuInstance {
     Initialize(){ this.state = STATE_GAME_START; this.menu = MENU_START; this.RenderMenu(); }
 
     /** @param {string} state */
-    SetState(state){
+    SetState(state, output = null){
         this.state = state.name;
         this.menu = state.menu;
         try {
             this.RenderMenu();
+            if (output) writeDialogue(output);
         } catch (error) {
             console.error(error);
         }

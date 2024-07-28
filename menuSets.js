@@ -34,7 +34,7 @@ class MenuList {
 
 const createMenus = () => {
     MENU_START = new MenuList({
-        "1": new MenuItem("Start", Menu.SetState, [STATE_MENU_CHAR_SELECT], "Start Game"),
+        "1": new MenuItem("Start", Menu.SetState, [STATE_MENU_CHAR_SELECT, blurbs.start], "Start Game"),
         "2": new MenuItem("Help", processOutput, [blurbs.help, DIALOGUE], "Game Help"),
         "3": new MenuItem("About", processOutput, [blurbs.about, DIALOGUE], "About"),
     });

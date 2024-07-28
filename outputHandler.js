@@ -20,6 +20,13 @@ const processOutput = (output, outputType) => {
  * @param {string} d 
  */
 const writeDialogue = d => {
+    // Starting a line with \c will clear the output
+    if (d.startsWith("\c")){
+        gameOutput.innerHTML = "";
+        gameOutput.innerText = "";
+        d = d.slice(1, d.length - 1)
+    }
+    
     const lines = d.split("\n");
     lines.forEach(line => {
         const newLine = document.createElement((line.length == 0) ? "br" : "div")
